@@ -79,7 +79,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	int32 GetTurn();
 
-	vector<vector<int32>> GetBoard();
+	UFUNCTION(BlueprintCallable)
+	TArray<int32> GetBoard();
 
 	stack<pair<int32, int32>> GetRecord();
 
@@ -98,7 +99,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	int32 Judge();
 
-	pair<pair<int32, int32>, pair<int32, int32>> GetWinningPos();
+	UFUNCTION(BlueprintCallable)
+	void GetWinningPos(int32& X1, int32& Y1, int32& X2, int32& Y2);
 
 	UFUNCTION(BlueprintCallable)
 	void Next(int32& X, int32& Y);

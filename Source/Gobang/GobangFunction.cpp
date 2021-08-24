@@ -83,8 +83,12 @@ int32 AGobangFunction::GetTurn() {
 		return Turn;
 }
 
-vector<vector<int32>> AGobangFunction::GetBoard() {
-	return Board;
+TArray<int32> AGobangFunction::GetBoard() {
+	TArray<int32> Res;
+	for (int32 i = 1; i <= 15; ++i)
+		for (int32 j = 1; j <= 15; ++j)
+			Res.Add(Board[i][j]);
+	return Res;
 }
 
 stack<pair<int32, int32>> AGobangFunction::GetRecord() {
@@ -159,8 +163,12 @@ int32 AGobangFunction::Judge() {
 	return 0;
 }
 
-pair<pair<int32, int32>, pair<int32, int32>> AGobangFunction::GetWinningPos() {
-	return WinningArrayDic[WinningPosition];
+void AGobangFunction::GetWinningPos(int32& X1, int32& Y1, int32& X2, int32& Y2) {
+	const pair<pair<int32, int32>, pair<int32, int32>> Temp = WinningArrayDic[WinningPosition];
+	X1 = Temp.first.first;
+	Y1 = Temp.first.second;
+	X2 = Temp.second.first;
+	Y2 = Temp.second.second;
 }
 
 void AGobangFunction::Next(int32& X, int32& Y) {
