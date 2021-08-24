@@ -75,4 +75,4 @@ DerivedDataCache/*
 
 # idea/rider
 .idea/
-Plugins/Developer/RiderLink
+Plugins/Developer/RiderLink/
