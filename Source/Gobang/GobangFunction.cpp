@@ -96,14 +96,12 @@ stack<pair<int32, int32>> AGobangFunction::GetRecord() {
 }
 
 void AGobangFunction::GetPrevPiece(int32& X, int32& Y) {
-	if (Record.size() <= 1) {
+	if (Record.size() == 0) {
 		X = -1;
 		Y = -1;
 	} else {
-		auto Temp = Record;
-		Temp.pop();
-		X = Temp.top().first;
-		Y = Temp.top().second;
+		X = Record.top().first;
+		Y = Record.top().second;
 	}
 }
 
@@ -183,7 +181,7 @@ void AGobangFunction::Next(int32& X, int32& Y) {
 	Y = Pos.second;
 }
 
-int32 AGobangFunction::GetNum() {
+int32 AGobangFunction::GetNumOfPieces() {
 	return static_cast<int32>(Record.size());
 }
 
