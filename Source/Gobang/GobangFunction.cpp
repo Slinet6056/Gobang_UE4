@@ -183,6 +183,10 @@ void AGobangFunction::Next(int32& X, int32& Y) {
 	Y = Pos.second;
 }
 
+int32 AGobangFunction::GetNum() {
+	return static_cast<int32>(Record.size());
+}
+
 int32 AGobangFunction::AlphaBeta(int32 depth, int32 alpha, int32 beta, pair<int32, int32>* pos) {
 	if (Judge() || !depth || !GetTurn())
 		return EvaluateBoard();

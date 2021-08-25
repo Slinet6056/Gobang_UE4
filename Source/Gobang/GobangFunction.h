@@ -105,6 +105,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void Next(int32& X, int32& Y);
 
+	UFUNCTION(BlueprintCallable)
+	int32 GetNum();
+
 private:
 	int32 AlphaBeta(int32, int32, int32, pair<int32, int32>* = nullptr);
 
