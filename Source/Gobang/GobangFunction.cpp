@@ -138,8 +138,8 @@ void AGobangFunction::Undo() {
 		Key ^= Board1[p.first][p.second];
 	else
 		Key ^= Board2[p.first][p.second];
-	for (int32 i = max(1, p.first - 1); i <= min(15, p.first + 1); ++i)
-		for (int32 j = max(1, p.second - 1); j <= min(15, p.second + 1); ++j)
+	for (int32 i = max(1, p.first - 2); i <= min(15, p.first + 2); ++i)
+		for (int32 j = max(1, p.second - 2); j <= min(15, p.second + 2); ++j)
 			--IsValid[i][j];
 	Record.pop();
 	Turn = 3 - Turn;
