@@ -64,7 +64,7 @@ AGobangFunction::AGobangFunction() {
 		}
 	}
 	IsValid[8][8] = 1;
-	Key = 13107947371880225101;
+	Key = 13107947371880225101U;
 }
 
 void AGobangFunction::Initialize() {
